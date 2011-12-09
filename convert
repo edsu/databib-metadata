@@ -1,0 +1,7 @@
+#!/bin/sh
+
+# sudo aptitude install raptor-utils
+
+rapper -i rdfa -o turtle dryad.html > dryad.ttl
+
+

@@ -1,0 +1,39 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix databib: <http://databib.org/ns#> .
+
+<http://databib.org/repository/dryad/>
+    databib:access "open" ;
+    databib:deposit "open" ;
+    databib:status "active" ;
+    dct:created "2007" ;
+    dct:description "Dryad is an international repository of data underlying peer-reviewed articles in the basic and applied bio-sciences. Dryad enables scientists to validate published findings, explore new analysis methodologies, re-purpose data for research questions unanticipated by the original authors, and perform synthetic studies. Dryad is governed by a consortium of journals that collaboratively promote data archiving and ensure the sustainability of the repository." ;
+    dct:publisher <http://www.nescent.org/> ;
+    dct:subject <http://id.loc.gov/authorities/sh85014203#concept> ;
+    dct:title "Dryad" ;
+    a databib:Repository ;
+    foaf:homepage "http://datadryad.org/" .
+
+<http://www.nescent.org/>
+    org:hasPrimarySite [
+        a vcard:VCard ;
+        org:siteAddress _:bnode2
+    ] .
+
+_:bnode2
+    vcard:adr _:bnode3 ;
+    vcard:geo _:bnode4 .
+
+_:bnode3
+    vcard:locality "Durham" ;
+    vcard:postal-code "27705-4667" ;
+    vcard:region "NC" ;
+    vcard:street-address "2024 W. Main Street" .
+
+_:bnode4
+    vcard:latitude "36.006501" ;
+    vcard:longitude "-78.922395" .
+
