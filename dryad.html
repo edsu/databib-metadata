@@ -4,7 +4,8 @@
     xmlns:foaf="http://xmlns.com/foaf/0.1/"
     xmlns:vcard="http://www.w3.org/2006/vcard/ns#"
     xmlns:databib="http://databib.lib.purdue.edu/ns#"
-    xmlns:oac="http://www.openannotation.org/ns/">
+    xmlns:oac="http://www.openannotation.org/ns/"
+    xmlns:cnt="http://www.w3.org/2011/content#">
     <head>
         <title>Databib - Dryad</title>
     </head>
@@ -70,9 +71,10 @@
             </tr>
         </table>
         <div id="Annotation" typeof="oac:Annotation" about="http://databib.lib.purdue.edu/viewapprovedbyrecordid.php?record=3#Annotation">
+	    <span rel="oac:hasTarget" resource="http://databib.lib.purdue.edu/viewapprovedbyrecordid.php?record=3#Repository"/> 
             <h3 property="dct:title">Comment/Tag</h3>
-            <div id="AnnotationBody" rel="oac:hasBody" resource="http://databib.lib.purdue.edu/viewapprovedbyrecordid.php?record=3#AnnotationBody">
-                <p><a about="http://databib.lib.purdue.edu/viewapprovedbyrecordid.php?record=3#Annotation" rel="oac:hasTarget" href="http://databib.lib.purdue.edu/viewapprovedbyrecordid.php?record=3#Repository">Here is my comment or tag</a></p>
+            <div id="AnnotationBody" rel="oac:hasBody" about="http://databib.lib.purdue.edu/viewapprovedbyrecordid.php?record=3#AnnotationBody">
+                <p property="cnt:ContentAsText">Here is my comment or tag</p>
                 <div about="http://databib.lib.purdue.edu/viewapprovedbyrecordid.php?record=3#Annotation" rel="dct:creator">
                     <span typeof="foaf:Agent" resource="http://example.org/user/mike">
                       <a property="foaf:name" rel="foaf:mbox"
