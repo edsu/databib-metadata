@@ -3,12 +3,16 @@
     xmlns:org="http://www.w3.org/ns/org#"
     xmlns:foaf="http://xmlns.com/foaf/0.1/"
     xmlns:vcard="http://www.w3.org/2006/vcard/ns#"
-    xmlns:databib="http://databib.org/ns#">
+    xmlns:databib="http://databib.lib.purdue.edu/ns#"
+    xmlns:oac="http://www.openannotation.org/ns/"
+    xmlns:cnt="http://www.w3.org/2011/content#">
     <head>
         <title>Databib - Dryad</title>
     </head>
     <body>
-        <table typeof="databib:Repository" about="http://databib.org/repository/dryad/">
+        <table typeof="databib:Repository"
+	       about="http://databib.lib.purdue.edu/viewapprovedbyrecordid.php?record=3#Repository"
+	       id="Repository">
             <tr>
                 <td>Title</td>
                 <td property="dct:title">Dryad</td>
@@ -66,5 +70,18 @@
                 <td>Consortium of journals</td>
             </tr>
         </table>
+        <div id="Annotation" typeof="oac:Annotation" about="http://databib.lib.purdue.edu/viewapprovedbyrecordid.php?record=3#Annotation">
+	    <span rel="oac:hasTarget" resource="http://databib.lib.purdue.edu/viewapprovedbyrecordid.php?record=3#Repository"/> 
+            <h3 property="dct:title">Comment/Tag</h3>
+            <div id="AnnotationBody" rel="oac:hasBody" about="http://databib.lib.purdue.edu/viewapprovedbyrecordid.php?record=3#AnnotationBody">
+                <p property="cnt:ContentAsText">Here is my comment or tag</p>
+                <div about="http://databib.lib.purdue.edu/viewapprovedbyrecordid.php?record=3#Annotation" rel="dct:creator">
+                    <span typeof="foaf:Agent" resource="http://example.org/user/mike">
+                      <a property="foaf:name" rel="foaf:mbox"
+                      href="mailto:mike@example.org">Mikey Tagger</a></span>
+		</div> 
+                <div about="http://databib.lib.purdue.edu/viewapprovedbyrecordid.php?record=3#Annotation" property="dct:created" content="2010-01-27">January 27, 2010.</div>
+            </div>
+        </div>
     </body>
 </html>
